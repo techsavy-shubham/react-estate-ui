@@ -1,0 +1,113 @@
+@import "../../responsive.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+
+  a {
+    transition: all 0.3s ease;
+
+    @include sm {
+      display: none;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  .left {
+    flex: 3;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      img {
+        width: 30px;
+      }
+
+      span {
+        @include md {
+          display: none;
+        }
+
+        @include sm {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    background-color: #fff9c5;
+    height: 100%;
+
+    @include md {
+      background-color: transparent;
+    }
+
+    a {
+      margin: 10px 20px;
+      padding: 10px 10px;
+    }
+
+    .register {
+      background-color: rgb(249, 249, 10);
+      padding: 10px 20px;
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -100%;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 0.6s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+
+      &.active {
+        right: 0;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
+}
