@@ -1,4 +1,4 @@
-@import "./responsive.scss";
+@import "../../responsive.scss";
 
 .layout {
   // background-color: rebeccapurple;
@@ -10,7 +10,8 @@
   padding-right: 20px;
   display: flex;
   flex-direction: column;
-
+  
+  
   @include lg {
     background-color: #ff7e67;
     max-width: 1280px;
@@ -27,7 +28,9 @@
   }
 
   .content {
-    //background-color: rebeccapurple;
-    flex: 1;
+    // background-color: rebeccapurple;
+    // flex: 1;
+    height:calc(100vh - 100px);
   }
 }
+

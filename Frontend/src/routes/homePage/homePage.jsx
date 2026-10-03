@@ -1,3 +1,5 @@
+import "../../responsive.scss";
+
 import SearchBar from "../../Components/searchBar/SearchBar";
 import "./homePage.scss";
 
@@ -20,7 +22,7 @@ function HomePage() {
             montes nisl tellus nec.
           </p>
           <SearchBar />
-          <div className="boxes">
+          <div className="boxes"> 
             <div className="box">
               <h1>16+</h1>
               <h2>Years of experience</h2>
@@ -35,8 +37,8 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="imgContainer">
+      </div>  
+      <div className="imgContainer">  
         <img src="/bg.png" alt="" />
       </div>
     </div>

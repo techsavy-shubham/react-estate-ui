@@ -4,12 +4,12 @@ import { useState } from "react";
 const types = ["Buy", "Rent"];
 
 function SearchBar() {
-  const [query, setQuery] = useState({
+  const [query, setQuery] = useState({ 
     type: "buy",
     location: "",
     minPrice: 0,
     maxPrice: 0,
-  });
+  }); 
 
   const switchType = (val) => {
     setQuery((prev) => ({ ...prev, type: val }));
@@ -26,7 +26,7 @@ function SearchBar() {
             {type}
           </button>
         ))}
-      </div>
+      </div> 
       <form>
         <input type="text" name="location" placeholder="City Location" />
         <input
@@ -35,7 +35,7 @@ function SearchBar() {
           min={0}
           max={1000000}
           placeholder="Min Price"
-        />
+        /> 
         <input
           type="number"
           name="maxPrice"
@@ -44,7 +44,7 @@ function SearchBar() {
           placeholder="Max Price"
         />
         <button>
-          <img src="/search.png" alt="" />
+          <img src="/search.png" alt="" /> 
         </button>
       </form>
     </div>
